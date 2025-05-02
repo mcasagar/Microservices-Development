@@ -1,0 +1,25 @@
+spring:
+  application:
+    name: 04_Welcome_Service
+
+#register our application with admin server
+  boot:
+    admin:
+      client:
+        url: http://localhost:1111/
+
+server:
+  port: 8081
+
+#Manual registration with the eureka server(this is a client app(microservice) we are registering with Eureka server) (but this is optional if our eureka server is running on the 8761)
+#eureka:
+#  client:
+#    service-url:
+#      defaultZone: http://localhost:8761/eureka/
+
+#To configure our this client service with actuator endpoinds.
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'  
