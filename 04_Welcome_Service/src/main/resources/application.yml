@@ -1,6 +1,6 @@
 spring:
   application:
-    name: 04_Welcome_Service
+    name: Welcome-Service
 
 #register our application with admin server
   boot:
