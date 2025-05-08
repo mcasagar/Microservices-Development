@@ -1,0 +1,9 @@
+spring:
+  application:
+    name: welcome  #It will read the welcome.yml file data
+  config:
+    import: optional:configserver:http://localhost:9093  # we are specifiying the url of the config server
+
+server:
+  port: 8088
+
