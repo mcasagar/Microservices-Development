@@ -8,9 +8,6 @@ spring:
       client:
         url: http://localhost:1111/
 
-server:
-  port: 8081
-
 #Manual registration with the eureka server(this is a client app(microservice) we are registering with Eureka server) (but this is optional if our eureka server is running on the 8761)
 #eureka:
 #  client:
