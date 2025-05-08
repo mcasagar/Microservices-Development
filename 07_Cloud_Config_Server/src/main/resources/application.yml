@@ -5,7 +5,7 @@ spring:
     config:
       server:
         git:
-          uri: https://github.com/ashokitschool/configuration_properties
+          uri: https://github.com/mcasagar/configuration_properties
 
 server:
   port: 9093
