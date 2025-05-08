@@ -1,0 +1,21 @@
+spring:
+  application:
+    name: API-Gateway
+  cloud:
+    gateway:
+      routes:
+      - id: api-1
+        uri: lb://WELCOME-SERVICE
+        predicates: 
+          - Path=/welcome               #If any request comes from the /welcome then send the request to the welcome service api
+      - id: api-2
+        uri: lb://GREET-SERVICE     #If any request comes from the /Greet then send the request to the greet service api
+        predicates: 
+          - Path=/greet
+server:
+  port: 3333
+
+#whenever request comes with /welcome I wnt to send request to the WELCOME-SERVICE  
+# (lb) is nothing but load balancer  
+
+#Predicates represents the rules when the request should go to which api
